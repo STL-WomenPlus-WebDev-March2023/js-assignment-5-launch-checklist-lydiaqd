@@ -40,7 +40,7 @@ else if (isNaN(testInput) === false) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    //loop through elements, pass elements to validate Input, push to array?
-   
+
 }
 
 async function myFetch() {
@@ -61,7 +61,7 @@ function pickPlanet(planets) {
 //module.exports.pickPlanet = pickPlanet; 
 //module.exports.myFetch = myFetch;
 
-const pilotName = document.getElementById('pilotStatus')
-const copilotName = document.getElementById('copilotStatus')
+const pilot = document.getElementById('pilotName')
+const copilot = document.getElementById('copilotName')
 const fuel = document.getElementById('fuelStatus')
 const cargoMass = document.getElementById('cargoStatus')
