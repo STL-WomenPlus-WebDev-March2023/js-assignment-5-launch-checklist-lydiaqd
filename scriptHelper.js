@@ -41,7 +41,20 @@ else if (isNaN(testInput) === false) {
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    //loop through elements, pass elements to validate Input, push to array?
 
-}
+   let pilotName = validateInput(pilot);
+
+   if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
+    alert("Inputs cannot be empty");
+   }
+
+   if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number") {
+    alert("Pilot and copilot cannot be numbers");
+   }
+
+   if (validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
+    alert("Fuel level and cargo levels must be numbers");
+   }
+};
 
 async function myFetch() {
     let planetsReturned;
@@ -60,8 +73,3 @@ function pickPlanet(planets) {
 //module.exports.formSubmission = formSubmission;
 //module.exports.pickPlanet = pickPlanet; 
 //module.exports.myFetch = myFetch;
-
-const pilot = document.getElementById('pilotName')
-const copilot = document.getElementById('copilotName')
-const fuel = document.getElementById('fuelStatus')
-const cargoMass = document.getElementById('cargoStatus')

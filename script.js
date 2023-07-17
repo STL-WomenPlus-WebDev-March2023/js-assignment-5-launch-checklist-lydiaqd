@@ -1,6 +1,20 @@
 // Write your JavaScript code here!
 
 window.addEventListener("load", function() {
+    let faultList = document.getElementById('faultyItems')
+    let pilotInput = document.getElementsByName[0]('pilotName')
+    let copilotInput = document.getElementsByName[0]('copilotName')
+    let fuelInput = document.getElementsByName[0]('fuelLevel')
+    let cargoInput = document.getElementsByName[0]('cargoMass')
+
+    let form = document.querySelector("form");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        console.log("submit");
+        formSubmission(document, faultList, pilotInput.value, copilotInput.value, fuelInput.value, cargoInput.value); 
+    });
+
+
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
@@ -14,3 +28,4 @@ window.addEventListener("load", function() {
    })
    
 });
+
